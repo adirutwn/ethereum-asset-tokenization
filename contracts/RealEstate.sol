@@ -4,7 +4,7 @@ import "../node_modules/zeppelin-solidity/contracts/token/ERC721/ERC721Token.sol
 
 contract RealEstate is ERC721Token {
 
-  address constant GOVERMENT = 0xe279252975db7Fa5a6169716EBE89149361c04c6;
+  address constant GOVERNMENT = 0xe779B1cD36d1C211CC4C0BCb6bBd5110e6Aaf9E0;
   mapping(uint256 => bool) internal blacklistedRealEstate;
 
   constructor (string _name, string _symbol) public ERC721Token(_name, _symbol) {
@@ -12,7 +12,7 @@ contract RealEstate is ERC721Token {
   }
 
   modifier onlyGoverment() {
-    require(msg.sender == GOVERMENT);
+    require(msg.sender == GOVERNMENT);
     _;
   }
 

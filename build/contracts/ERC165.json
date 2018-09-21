@@ -26,9 +26,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.4.24;\n\n\n/**\n * @title ERC165\n * @dev https://github.com/ethereum/EIPs/blob/master/EIPS/eip-165.md\n */\ninterface ERC165 {\n\n  /**\n   * @notice Query if a contract implements an interface\n   * @param _interfaceId The interface identifier, as specified in ERC-165\n   * @dev Interface identification is specified in ERC-165. This function\n   * uses less than 30,000 gas.\n   */\n  function supportsInterface(bytes4 _interfaceId)\n    external\n    view\n    returns (bool);\n}\n",
-  "sourcePath": "/Users/adirut/r0ix/tokenize-real-estate/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
+  "sourcePath": "/Users/adirut/r0ix/ethereum-asset-tokenization/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
   "ast": {
-    "absolutePath": "/Users/adirut/r0ix/tokenize-real-estate/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
+    "absolutePath": "/Users/adirut/r0ix/ethereum-asset-tokenization/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
     "exportedSymbols": {
       "ERC165": [
         190
@@ -152,7 +152,7 @@
     "src": "0:485:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/adirut/r0ix/tokenize-real-estate/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
+    "absolutePath": "/Users/adirut/r0ix/ethereum-asset-tokenization/node_modules/zeppelin-solidity/contracts/introspection/ERC165.sol",
     "exportedSymbols": {
       "ERC165": [
         190
@@ -281,5 +281,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-12T05:47:43.361Z"
+  "updatedAt": "2018-09-12T09:54:03.010Z"
 }

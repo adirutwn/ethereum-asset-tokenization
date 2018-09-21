@@ -13,18 +13,18 @@ const RealEstateSmartContract = require('./build/contracts/RealEstate.json');
     RealEstate.setProvider(web3.currentProvider);
     const RealEstateInstance = await RealEstate.deployed();
 
-    // Get the account address and unlock the Alice account to transfer ownership to Bob.
+    // Get the account address and unlock the government account to unblock Bob's asset.
     const accounts = await jsonfile.readFile(file);
-    const goverment = accounts[0];
-    await web3.eth.personal.unlockAccount(goverment.address, goverment.name, 600);
+    const government = accounts[0];
+    await web3.eth.personal.unlockAccount(government.address, government.name, 600);
 
-    // House that Alice brought
-    const houseId = 11;
+    // Bob's house
+    const houseId = 15;
 
-    // Transfer ownership of the asset
-    await RealEstateInstance.enableTransfer(houseId, {from: goverment.address, gas: 500000});
+    // Unblocked Bob's assets
+    await RealEstateInstance.enableTransfer(houseId, {from: government.address, gas: 500000});
 
-    console.log(`Success: Goverment had unblocked the property since after investigation, goverment found that Alice is an innocent.`);
+    console.log(`Success: Goverment had unblocked the property since after investigation, government found that Alice is an innocent.`);
 
   } catch(e) {
     console.log(e);

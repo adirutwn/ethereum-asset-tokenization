@@ -22,7 +22,7 @@ const RealEstateSmartContract = require('./build/contracts/RealEstate.json');
     const bob = accounts[3];
 
     // House that Alice brought
-    const houseId = 11;
+    const houseId = 15;
 
     // Transfer ownership of the asset
     await RealEstateInstance.safeTransferFrom(alice.address, bob.address, houseId, {from: alice.address, gas: 500000});

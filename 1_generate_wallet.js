@@ -3,7 +3,7 @@ const jsonfile = require('jsonfile');
 const file = 'accounts.json';
 
 const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
-const actors = [{name: 'goverment'}, {name: 'real-estate-developer'}, {name: 'Alice'}, {name: 'Bob'}];
+const actors = [{name: 'government'}, {name: 'real-estate-developer'}, {name: 'Alice'}, {name: 'Bob'}];
 
 generateWallet();
 

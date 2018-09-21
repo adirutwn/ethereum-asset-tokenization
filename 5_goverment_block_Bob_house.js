@@ -13,16 +13,16 @@ const RealEstateSmartContract = require('./build/contracts/RealEstate.json');
     RealEstate.setProvider(web3.currentProvider);
     const RealEstateInstance = await RealEstate.deployed();
 
-    // Get the account address and unlock the Alice account to transfer ownership to Bob.
+    // Get the account address and unlock the government account to block the transferability of Bob's asset.
     const accounts = await jsonfile.readFile(file);
-    const goverment = accounts[0];
-    await web3.eth.personal.unlockAccount(goverment.address, goverment.name, 600);
+    const government = accounts[0];
+    await web3.eth.personal.unlockAccount(government.address, government.name, 600);
 
-    // House that Alice brought
-    const houseId = 11;
+    // Bob's house
+    const houseId = 15;
 
-    // Transfer ownership of the asset
-    await RealEstateInstance.disableTransfer(houseId, {from: goverment.address, gas: 500000});
+    // Block the transferability of Bob's asset
+    await RealEstateInstance.disableTransfer(houseId, {from: government.address, gas: 500000});
 
     console.log(`Success: Goverment had blocked an ability to transfer ownership of house#${houseId}, since Alice is a suspect for running ponzi scheme.`);
 
