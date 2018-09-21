@@ -24,7 +24,7 @@ const RealEstateSmartContract = require('./build/contracts/RealEstate.json');
     // Block the transferability of Bob's asset
     await RealEstateInstance.disableTransfer(houseId, {from: government.address, gas: 500000});
 
-    console.log(`Success: Goverment had blocked an ability to transfer ownership of house#${houseId}, since Alice is a suspect for running ponzi scheme.`);
+    console.log(`Success: Government had blocked an ability to transfer ownership of house#${houseId}, since Alice is a suspect for running ponzi scheme.`);
 
   } catch(e) {
     console.log(e);
