@@ -11,7 +11,7 @@ contract RealEstate is ERC721Token {
 
   }
 
-  modifier onlyGoverment() {
+  modifier onlyGovernment() {
     require(msg.sender == GOVERNMENT);
     _;
   }
@@ -19,19 +19,19 @@ contract RealEstate is ERC721Token {
   function tokenizedRealEstate(
     address _realEstateOwner,
     uint256 _tokenId
-  ) onlyGoverment public {
+  ) onlyGovernment public {
     super._mint(_realEstateOwner, _tokenId);
   }
 
   function disableTransfer(
     uint256 _tokenId
-  ) onlyGoverment public {
+  ) onlyGovernment public {
     blacklistedRealEstate[_tokenId] = true;
   }
 
   function enableTransfer(
     uint256 _tokenId
-  ) onlyGoverment public {
+  ) onlyGovernment public {
     blacklistedRealEstate[_tokenId] = false;
   }
 

@@ -24,7 +24,7 @@ const RealEstateSmartContract = require('./build/contracts/RealEstate.json');
     // Unblocked Bob's assets
     await RealEstateInstance.enableTransfer(houseId, {from: government.address, gas: 500000});
 
-    console.log(`Success: Goverment had unblocked the property since after investigation, government found that Alice is an innocent.`);
+    console.log(`Success: Government had unblocked the property since after investigation, government found that Alice is an innocent.`);
 
   } catch(e) {
     console.log(e);
